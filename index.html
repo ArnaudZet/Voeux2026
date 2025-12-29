@@ -4,116 +4,145 @@
   <meta charset="UTF-8">
   <title>Résolution 2026 — Arnaud Zetlaoui</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <style>
-body {
-  margin:0;
-  padding:0;
-  background:#fcfaf6;
-  color:#1F2724;
-  font-family:-apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  min-height:100vh;
-}
-.container {
-  max-width:760px;
-  padding:60px 40px;
-  text-align:left;
-}
-h1 {
-  font-size:2.1rem;
-  margin-bottom:3rem;
-  letter-spacing:0.04em;
-  font-weight:600;
-}
-h1::after {
-  content:"";
-  display:inline-block;
-  width:6px;
-  height:6px;
-  border-radius:50%;
-  background:#fc4315;
-  margin-left:6px;
-  transform:translateY(-4px);
-}
-.result {
-  font-size:1.4rem;
-  line-height:1.3;
-  margin-bottom:2.5rem;
-  font-weight:400;
-  background:#fcfaf6;
-  border:1px solid rgba(0,0,0,0.22);
-  border-radius:14px;
-  padding:12px 16px;
-  display:flex;
-  align-items:center;
-}
-.btn {
-  background:#fc4315;
-  color:#fff;
-  padding:13px 36px;
-  font-size:0.9rem;
-  border:none;
-  border-radius:999px;
-  cursor:pointer;
-  letter-spacing:0.1em;
-  text-transform:uppercase;
-}
-.btn:hover {
-  opacity:0.9;
-}
-.note, .footnote, .signature {
-  margin-top:1.4rem;
-  font-size:0.85rem;
-  opacity:0.8;
-}
-.signature {
-  margin-top:2.2rem;
-  text-transform:uppercase;
-  letter-spacing:0.14em;
-}
-@media (max-width: 768px) {
-  .result { font-size: 1.15rem; }
-}
-@media (max-width: 420px) {
-  .result { font-size: 1.05rem; }
-}
-</style>
-
-<style id="az-overrides">
-.container{
-  border: 1px solid rgba(31,39,36,0.18);
-  border-radius: 12px;
-  padding: 56px;
-  background-clip: padding-box;
-}
-.result{
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-  font-weight:300;
-  letter-spacing: 0.02em;
-}
-</style>
-
 <style>
-.az-game-block{
-  margin-top:48px;
-  padding-top:24px;
-  border-top:3px solid #000;
+body {
+  margin: 0;
+  padding: 0;
+  background: #fcfaf6;
+  color: #1F2724;
+  font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
 }
-.az-game-steps{
-  font-size:15px;
-  line-height:1.6;
+
+.container {
+  max-width: 100%;
+  padding: 28px 18px 36px;
+}
+
+h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 2rem;
+  letter-spacing: 0.03em;
+}
+
+h1::after {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fc4315;
+  margin-left: 6px;
+  transform: translateY(-4px);
+}
+
+.result {
+  font-family: 'Poppins', system-ui, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.35;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  margin-bottom: 1.8rem;
+  padding: 14px 16px;
+  border: 1px solid rgba(0,0,0,0.22);
+  border-radius: 12px;
+  background: #fcfaf6;
+}
+
+.btn {
+  width: 100%;
+  background: #fc4315;
+  color: #fff;
+  padding: 16px 0;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.az-game-block {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0,0,0,0.25);
+}
+
+.az-game-steps {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.signature {
+  margin-top: 36px;
+  font-size: 0.75rem;
+  opacity: 0.75;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .container {
+    max-width: 760px;
+    padding: 56px;
+    border: 1px solid rgba(31,39,36,0.18);
+    border-radius: 12px;
+    background-clip: padding-box;
+  }
+
+  h1 {
+    font-size: 2.1rem;
+    margin-bottom: 3rem;
+  }
+
+  .result {
+    font-size: 1.4rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .btn {
+    width: auto;
+    padding: 13px 36px;
+  }
+
+  .az-game-block {
+    margin-top: 48px;
+    padding-top: 24px;
+  }
+
+  .az-game-steps {
+    font-size: 15px;
+  }
+
+  .signature {
+    margin-top: 2.2rem;
+    font-size: 0.85rem;
+  }
 }
 </style>
-
 </head>
+
 <body>
   <div class="container">
+
     <h1>Pas encore de résolution pour 2026 ?<br>Je m’en occupe.</h1>
 
     <div id="result" class="result"></div>
@@ -131,6 +160,7 @@ h1::after {
     <div class="signature">
       Arnaud Zetlaoui - Idées, communication et dispositif de communication.
     </div>
+
   </div>
 
 <script>
